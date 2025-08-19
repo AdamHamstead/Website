@@ -10,8 +10,11 @@
 		"test": "vitest"
 	},
 	"dependencies": {
+		"@babel/parser": "^7.28.3",
+		"bootstrap": "^5.3.7",
 		"react": "^19.0.0",
-		"react-dom": "^19.0.0"
+		"react-dom": "^19.0.0",
+		"react-draggable": "^4.5.0"
 	},
 	"devDependencies": {
 		"@testing-library/jest-dom": "^6.6.3",
