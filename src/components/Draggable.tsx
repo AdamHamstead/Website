@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { useDraggable } from '@dnd-kit/core';
 
 interface Props {
-  id: string;
+  id: string | number;
   label: string;
 }
 

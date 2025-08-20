@@ -57,10 +57,10 @@ export const RightPanel = () => {
 
     if (over.id === 'selected') {
       setSelectedItem(draggedItem);
-      if (activeItemOrigin === 'favorite') setFavoriteItem(null);
+      //if (activeItemOrigin === 'favorite') setFavoriteItem(null);
     } else if (over.id === 'favorite') {
       setFavoriteItem(draggedItem);
-      if (activeItemOrigin === 'selected') setSelectedItem(null);
+      //if (activeItemOrigin === 'selected') setSelectedItem(null);
     }
   };
 
