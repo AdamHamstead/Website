@@ -1,20 +1,34 @@
+import { FC } from 'react';
+import { useDraggable } from '@dnd-kit/core';
 
-import React from 'react';
-import {useDraggable} from '@dnd-kit/core';
-import {CSS} from '@dnd-kit/utilities';
+interface Props {
+  id: string;
+  label: string;
+}
 
-export function Draggable(props) {
-  const {attributes, listeners, setNodeRef, transform} = useDraggable({
-    id: props.id,
+export const Draggable: FC<Props> = ({ id, label }) => {
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+  } = useDraggable({
+    id,
   });
+
   const style = {
-    // Outputs `translate3d(x, y, 0)`
-    transform: CSS.Translate.toString(transform),
+    color: 'white',
+    backgroundColor: '#007bff',
+    border: '1px dashed black',
+    borderRadius: '4px',
+    padding: '0.5rem 1rem',
+    cursor: 'grab',
+    listStyle: 'none',
+    display: 'inline-block',
   };
 
   return (
-    <button ref={setNodeRef} style={style} {...listeners} {...attributes}>
-      {props.children}
-    </button>
+    <li ref={setNodeRef} style={style} {...attributes} {...listeners}>
+      {label}
+    </li>
   );
-}
+};

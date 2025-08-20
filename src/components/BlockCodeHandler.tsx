@@ -4,11 +4,7 @@ import React, { useState, useEffect } from 'react';
 import * as parser from '@babel/parser';
 import { File, Node } from '@babel/types'; // Type definitions for AST
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { DndContext } from '@dnd-kit/core';
-import { Draggable } from './Draggable';
-import { Droppable } from './Droppable';
-import { DragDropManager } from '@dnd-kit/dom';
-import { Sortable } from '@dnd-kit/dom/sortable';
+
 
 const sampleCode: string = `
   import React, { useState, useEffect } from 'react';
